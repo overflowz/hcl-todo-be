@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const AuthService = require('../../../core/services/auth.service');
 
 class AuthRouter {
   constructor() {
@@ -15,7 +16,8 @@ class AuthRouter {
   }
 
   onLoginRequest(req, res) {
-    return res.end('OK');
+    const user = AuthService.login(req.body);
+    return res.json(user);
   }
 
   onLogoutRequest(req, res) {
