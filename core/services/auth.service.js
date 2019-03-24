@@ -1,7 +1,7 @@
-const UserModel = require('../models/user.model');
+const db = require('../models/db.model');
 
-const login = userdata => {
-  const user = new UserModel(userdata);
+const login = name => {
+  const user = db.findUser(name);
   return user;
 };
 
