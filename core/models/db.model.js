@@ -7,7 +7,7 @@ let todos = [];
 
 // fancy id generator
 function* genid() {
-  let x = 0;
+  let x = 1;
   // eslint-disable-next-line no-plusplus
   while (true) yield x++;
 }
@@ -19,9 +19,11 @@ const findUser = name => {
 };
 
 // !! mutating !!
+// also terrible decision here, since todo might be not
+// an object which will fail. I do realize that.
 const createTodo = (author, todo) => {
   const id = idGenerator.next().value;
-  const todo_ = new TodoModel({ id, author, todo });
+  const todo_ = new TodoModel({ id, author, ...todo });
 
   todos.push(todo_);
   return todo_;
