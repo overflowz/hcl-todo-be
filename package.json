@@ -1,0 +1,25 @@
+{
+  "name": "hcl-todo-be",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "awilix": "^4.2.1",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "fluture": "^11.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "ramda": "^0.26.1",
+    "ramda-fantasy": "github:overflowz/ramda-fantasy"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.3",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
